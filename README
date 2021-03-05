@@ -74,13 +74,20 @@ cd ~/rpi3b-wifi
 Here are the summary of the tests: ( see https://pi4j.com/1.2/pins/model-3b-rev1.html )
 These tests used Seeed Grove starter kit LED, Grove-LCD RGB Backlight V3.0 JHD1313M2, Analog Servo.
 
+Change HOST to your Raspberry PI 3B board for client_led.c, client_lcd.c, client_servo.c, client_led.py, client_lcd.py, client_servo.py.
+chmod 755 *.py
+On Raspberry PI 3B board, type "make server".
+On PC, type "make client".
+
 1. led test.
    This test will blink led 5 times. 
    Connect gpio pin 18 to led control. 
    Connect gpio pin 2 to led 5V. 
    Connect gpio pin 9 to led ground.
-   On Raspberry PI 3B board, type "./server_led.py"
-   On PC, type "./client_led.py"  ( change HOST to your Raspberry PI 3B board )
+   On Raspberry PI 3B board, type "./server_led.py".
+   On PC, type "./client_led.py".
+   On Raspberry PI 3B board, type "sudo ./server_led".
+   On PC, type "./client_led".
 
 2. i2c lcd test.
    This test will change lcd backlight color for 5 cycles.
@@ -89,15 +96,19 @@ These tests used Seeed Grove starter kit LED, Grove-LCD RGB Backlight V3.0 JHD13
    Connect gpio pin 5 to lcd display SCL.
    Connect gpio pin 2 to lcd display 5V.
    Connect gpio pin 9 to lcd display ground.
-   On Raspberry PI 3B board, type "./server_lcd.py"
-   On PC, type "./client_lcd.py"  ( change HOST to your Raspberry PI 3B board )
+   On Raspberry PI 3B board, type "./server_lcd.py".
+   On PC, type "./client_lcd.py".
+   On Raspberry PI 3B board, type "sudo ./server_lcd".
+   On PC, type "./client_lcd".
 
 3. servo.
    This test will turn servo 90 degree - 180 degree - 90 degree - 0 degree etc.
    Connect gpio pin 33 to servo control.
    Connect gpio pin 2 to servo 5V.
    Connect gpio pin 9 to servo ground.
-   On Raspberry PI 3B board, type "./server_servo.py"
-   On PC, type "./client_servo.py"  ( change HOST to your Raspberry PI 3B board )
+   On Raspberry PI 3B board, type "./server_servo.py".
+   On PC, type "./client_servo.py".
+   On Raspberry PI 3B board, type "sudo ./server_servo".
+   On PC, type "./client_servo".
 
 -----------------------------------------------------------------------------
